@@ -1,30 +1,31 @@
 {
-  "name": "vue-cli-plugin-pug",
-  "version": "1.0.7",
-  "description": "Vue CLI 3 plugin to add pug templating to your components and compilation of .pug template files",
+  "name": "vue-cli-plugin-slm",
+  "version": "1.0.0",
+  "description": "Vue CLI 3 plugin to add slm templating to your components and compilation of .slm template files",
   "main": "index.js",
   "dependencies": {
-    "pug": "^2.0.4",
-    "pug-plain-loader": "^1.0.0",
+    "slm": "^2.0.0",
+    "slm-loader": "^1.0.0-beta.2",
     "raw-loader": "^3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "vue",
     "vue-cli",
-    "pug"
+    "slm"
   ],
   "repository": {
-    "url": "https://github.com/jaeming/vue-cli-plugin-pug",
+    "url": "https://github.com/skovsboll/vue-cli-plugin-slm",
     "type": "git"
   },
-  "author": "Benji Dalton <daylightsavings@gmail.com>",
+  "author": "Benji Dalton <daylightsavings@gmail.com> and Søren Skovsbøll <soren@skovsboll.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaeming/vue-cli-plugin-pug/issues"
+    "url": "https://github.com/skovsboll/vue-cli-plugin-slm/issues"
   },
-  "homepage": "https://github.com/jaeming/vue-cli-plugin-pug"
+  "homepage": "https://github.com/skovsboll/vue-cli-plugin-slm"
 }

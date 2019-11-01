@@ -1,28 +1,28 @@
 module.exports = api => {
   api.chainWebpack(webpackConfig => {
     // Remove any existing rule added from a previous version of the plugin (npm uninstall/ yarn remove will remove the plugin, but leave behind the webpack rules)
-    webpackConfig.module.rules.delete('pug')
+    webpackConfig.module.rules.delete('slm')
 
-    // Rules taken from: https://vue-loader.vuejs.org/guide/pre-processors.html#pug
+    // Rules taken from: https://vue-loader.vuejs.org/guide/pre-processors.html#slm
     webpackConfig.module
-      .rule('pug')
-        .test(/\.pug$/)
+      .rule('slm')
+        .test(/\.slm$/)
 
-        // this applies to <template lang="pug"> in Vue components
+        // this applies to <template lang="slm"> in Vue components
         .oneOf('vue-loader')
           .resourceQuery(/^\?vue/)
-          .use('pug-plain')
-            .loader('pug-plain-loader')
+          .use('slm-plain')
+            .loader('slm-loader')
             .end()
         .end()
 
-        // this applies to pug imports inside JavaScript, i.e. .pug files
-        .oneOf('raw-pug-files')
-          .use('pug-raw')
+        // this applies to slm imports inside JavaScript, i.e. .slm files
+        .oneOf('raw-slm-files')
+          .use('slm-raw')
             .loader('raw-loader')
             .end()
-          .use('pug-plain')
-            .loader('pug-plain-loader')
+          .use('slm-plain')
+            .loader('slm-loader')
             .end()
         .end()
   })
